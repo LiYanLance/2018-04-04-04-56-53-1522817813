@@ -30,5 +30,14 @@ public class FizzBuzzGameTest {
         assertThat(results.get(9), is("Buzz"));
     }
 
+    @Test
+    public void should_return_Whizz_when_multiples_7(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(6), is("Whizz"));
+        assertThat(results.get(13), is("Whizz"));
+    }
+
     
 }

@@ -17,6 +17,9 @@ public class FizzBuzzGame {
             if(i % 5 == 0){
                 result = "Buzz";
             }
+            if(i % 7 == 0){
+                result = "Whizz";
+            }
             results.add(Optional.ofNullable(result).orElse(String.valueOf(i)));
         }
     }
