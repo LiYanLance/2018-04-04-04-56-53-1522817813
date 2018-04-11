@@ -39,5 +39,39 @@ public class FizzBuzzGameTest {
         assertThat(results.get(13), is("Whizz"));
     }
 
+    @Test
+    public void should_return_FizzBuzz_when_multiples_3_and_5(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(14), is("FizzBuzz"));
+        assertThat(results.get(44), is("FizzBuzz"));
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_multiples_3_and_7(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(20), is("FizzWhizz"));
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_when_multiples_5_and_7(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(34), is("BuzzWhizz"));
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_when_multiples_3_and_5_and_7(){
+        fizzBuzzGame.start(105);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(104), is("FizzBuzzWhizz"));
+    }
+
     
+
 }

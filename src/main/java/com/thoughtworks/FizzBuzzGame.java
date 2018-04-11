@@ -10,17 +10,17 @@ public class FizzBuzzGame {
 
     public void start(int count) {
         for (int i = 1; i <= count; i++) {
-            String result = null;
+            String result = "";
             if(i % 3 == 0){
                 result = "Fizz";
             }
             if(i % 5 == 0){
-                result = "Buzz";
+                result += "Buzz";
             }
             if(i % 7 == 0){
-                result = "Whizz";
+                result += "Whizz";
             }
-            results.add(Optional.ofNullable(result).orElse(String.valueOf(i)));
+            results.add(result.length() == 0 ? String.valueOf(i) : result);
         }
     }
 
