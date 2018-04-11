@@ -61,7 +61,7 @@ public class FizzBuzzGameTest {
         fizzBuzzGame.start(100);
         results = fizzBuzzGame.getResults();
 
-        assertThat(results.get(34), is("BuzzWhizz"));
+        assertThat(results.get(69), is("BuzzWhizz"));
     }
 
     @Test
@@ -72,6 +72,14 @@ public class FizzBuzzGameTest {
         assertThat(results.get(104), is("FizzBuzzWhizz"));
     }
 
-    
+    @Test
+    public void should_return_Fizz_when_contains_3(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(2), is("Fizz"));
+        assertThat(results.get(29), is("Fizz"));
+        assertThat(results.get(34), is("Fizz"));
+    }
 
 }
