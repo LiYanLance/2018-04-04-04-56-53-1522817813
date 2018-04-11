@@ -20,4 +20,15 @@ public class FizzBuzzGameTest {
         assertThat(results.get(2), is("Fizz"));
         assertThat(results.get(5), is("Fizz"));
     }
+
+    @Test
+    public void should_return_Buzz_when_multiples_5(){
+        fizzBuzzGame.start(100);
+        results = fizzBuzzGame.getResults();
+
+        assertThat(results.get(4), is("Buzz"));
+        assertThat(results.get(9), is("Buzz"));
+    }
+
+    
 }
